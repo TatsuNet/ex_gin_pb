@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package service;
+
+import "entity/user.proto";
+
+service UserService {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+message GetUserRequest {
+  string Id = 1;
+}
+
+message GetUserResponse {
+  entity.User User = 1;
+}

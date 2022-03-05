@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package entity;
+
+import "entity/user_item.proto";
+
+message User {
+  string Id = 1;
+  string Name = 2;
+  bool IsBan = 3;
+  repeated entity.UserItem UserItems = 4;
+}

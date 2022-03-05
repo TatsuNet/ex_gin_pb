@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package entity;
+
+message UserItem {
+  string Id = 1;
+  string UserId = 2;
+  string ItemId = 3;
+  uint32 Num = 4;
+}
