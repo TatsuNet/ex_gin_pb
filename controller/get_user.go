@@ -1,12 +1,13 @@
 package controller
 
 import (
-	"ex_gin_pb/entity"
-	"ex_gin_pb/service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
+
+	"ex_gin_pb/entity"
+	"ex_gin_pb/service"
 )
 
 var (

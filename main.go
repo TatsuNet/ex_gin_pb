@@ -1,9 +1,10 @@
 package main
 
 import (
-	"ex_gin_pb/controller"
 	"fmt"
 	"os"
+
+	"ex_gin_pb/controller"
 
 	"github.com/gin-gonic/gin"
 )
