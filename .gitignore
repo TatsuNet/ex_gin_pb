@@ -1,4 +1,4 @@
 .idea
-entity/*.pb.go
-service/*.pb.go
+entity
+service
 tmp

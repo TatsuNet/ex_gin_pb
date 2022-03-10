@@ -71,15 +71,19 @@ docker-compose logs -f --tail=500 api
 
 ## 動作確認
 
+```
+pwd    # ${GOPATH}/src/github.com/TatsuNet/ex_gin_pb
+```
+
 ### 検索ヒットする場合
 
 リクエスト
 
 ```
 echo 'Id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1"' \
-  | protoc --encode=service.GetUserRequest ./service/user_service.proto \
+  | protoc -I./proto --encode=service.GetUserRequest ./proto/service/user_service.proto \
   | curl -sS -X POST --header "Content-Type: application/protobuf" --data-binary @- http://localhost:3000/get_user \
-  | protoc --decode=service.GetUserResponse ./service/user_service.proto
+  | protoc -I./proto --decode=service.GetUserResponse ./proto/service/user_service.proto
 ```
 
 レスポンス
@@ -109,7 +113,7 @@ User {
 
 ```
 echo 'Id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2"' \
-  | protoc --encode=service.GetUserRequest ./service/user_service.proto \
+  | protoc -I./proto --encode=service.GetUserRequest ./proto/service/user_service.proto \
   | curl -sS -i -X POST --header "Content-Type: application/protobuf" --data-binary @- http://localhost:3000/get_user -o /dev/null -w '%{http_code}\n'
 ```
 
