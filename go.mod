@@ -3,8 +3,12 @@ module ex_gin_pb
 go 1.17
 
 require (
+	github.com/gertd/go-pluralize v0.2.0
 	github.com/gin-gonic/gin v1.7.7
-	google.golang.org/protobuf v1.27.1
+	github.com/golang/protobuf v1.5.2
+	github.com/iancoleman/strcase v0.2.0
+	github.com/pkg/errors v0.9.1
+	google.golang.org/protobuf v1.28.0
 )
 
 require (
@@ -12,7 +16,6 @@ require (
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.10.0 // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
